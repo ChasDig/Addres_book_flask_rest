@@ -1,3 +1,4 @@
+import json_logging
 import flask
 
 from application.setup.db import db

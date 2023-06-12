@@ -3,6 +3,7 @@ from flask import request
 
 from application.container import users_service
 from application.setup.api.models_serialization import users_serializer
+from application.app_logger import start_logging
 
 api = Namespace("users")
 
@@ -18,6 +19,7 @@ class UsersView(Resource):
     @api.response(code=400, description="Bad Request")
     @api.marshal_with(users_serializer, as_list=True, code=201, description="Created")
     def put(self):
+        start_logging()
         data_json = request.json
         return users_service.create_user(data_json=data_json)
 
@@ -33,12 +35,14 @@ class UserView(Resource):
     @api.response(code=400, description="Bad Request")
     @api.marshal_with(users_serializer, as_list=True, code=200, description="OK")
     def patch(self, user_id):
+        start_logging()
         data_json = request.json
         return users_service.update_user(user_id=user_id, data_json=data_json)
 
     @api.response(code=400, description="Bad Request")
     @api.marshal_with(users_serializer, as_list=True, code=204, description="no content")
     def delete(self, user_id):
+        start_logging()
         return users_service.delete_user(user_id=user_id)
 
 

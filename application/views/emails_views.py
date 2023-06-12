@@ -3,6 +3,7 @@ from flask import request
 
 from application.container import email_service
 from application.setup.api.models_serialization import email_serializer
+from application.app_logger import start_logging
 
 api = Namespace("emails")
 
@@ -18,6 +19,7 @@ class EmailViews(Resource):
     @api.response(code=400, description="Bad Request")
     @api.marshal_with(email_serializer, as_list=True, code=201, description="Created")
     def put(self):
+        start_logging()
         data_json = request.json
         return email_service.create_email(data_json=data_json)
 
@@ -33,12 +35,14 @@ class EmailsViews(Resource):
     @api.response(code=400, description="Bad Request")
     @api.marshal_with(email_serializer, as_list=True, code=200, description="OK")
     def patch(self, email_id):
+        start_logging()
         data_json = request.json
         return email_service.update_email(email_id=email_id, data_json=data_json)
 
     @api.response(code=400, description="Bad Request")
     @api.marshal_with(email_serializer, as_list=True, code=204, description="no content")
     def delete(self, email_id):
+        start_logging()
         return email_service.delete_email(email_id=email_id)
 
 

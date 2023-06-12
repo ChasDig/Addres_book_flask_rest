@@ -56,8 +56,8 @@ class PhonesDAO(BaseDAO):
     def create_phone(self, data_json):
         new_phone = self.__model__(
             user_id=data_json["user_id"],
-            view=data_json["user_id"],
-            number=data_json["user_id"],
+            view=data_json["view"],
+            number=data_json["number"],
         )
         self.db_session.add(new_phone)
         self.db_session.commit()

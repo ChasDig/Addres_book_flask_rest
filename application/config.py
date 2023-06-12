@@ -17,12 +17,20 @@ class TestConfig(BaseConfig):
     TESTING = True
     DEBUG = True
     SQLALCHEMY_ECHO = True
-    SQLALCHEMY_DATABASE_URI = f"sqlite:///{BASE_DIR.joinpath('application.db').as_posix()}"
+    DATA_BASE_NAME = "application.db"
+    SQLALCHEMY_DATABASE_URI = f"sqlite:///{BASE_DIR.joinpath(DATA_BASE_NAME).as_posix()}"
 
 
 class ProductionConfig(BaseConfig):
     """Additional configurations for the application when production."""
-    pass
+    DEBUG = False
+    SQLALCHEMY_ECHO = True
+    USERNAME = "postgres"
+    PASSWORD = "postgres"
+    HOST = "localhost"
+    PORT = 5432
+    DATA_BASE_NAME = "postgres"
+    SQLALCHEMY_DATABASE_URI = f"postgresql://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DATA_BASE_NAME}"
 
 
 class ApplicationConfig:
@@ -37,4 +45,4 @@ class ApplicationConfig:
         return "Error!"
 
 
-config = ApplicationConfig.configuration_setting("testing")
+config = ApplicationConfig.configuration_setting("develop")

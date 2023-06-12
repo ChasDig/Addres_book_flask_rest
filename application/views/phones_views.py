@@ -3,6 +3,7 @@ from flask import request
 
 from application.container import phone_service
 from application.setup.api.models_serialization import phone_serializer
+from application.app_logger import start_logging
 
 api = Namespace("phones")
 
@@ -18,6 +19,7 @@ class PhonesViews(Resource):
     @api.response(code=400, description="Bad Request")
     @api.marshal_with(phone_serializer, as_list=True, code=201, description="Created")
     def put(self):
+        start_logging()
         data_json = request.json
         return phone_service.create_phones(data_json=data_json)
 
@@ -33,12 +35,14 @@ class PhoneViews(Resource):
     @api.response(code=400, description="Bad Request")
     @api.marshal_with(phone_serializer, as_list=True, code=200, description="OK")
     def patch(self, phone_id):
+        start_logging()
         data_json = request.json
         return phone_service.update_phone(phone_id=phone_id, data_json=data_json)
 
     @api.response(code=400, description="Bad Request")
     @api.marshal_with(phone_serializer, as_list=True, code=204, description="no content")
     def delete(self, phone_id):
+        start_logging()
         return phone_service.delete_phone(phone_id=phone_id)
 
 
