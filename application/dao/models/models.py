@@ -19,7 +19,7 @@ class Users(base_models.BaseModel):
     address = Column(String(256), nullable=False)
 
     @validates("sex")
-    def validate_user_sex(self, _, address):
+    def validate_user_sex(self, _, address: str) -> str:
         if address not in USER_SEX:
             raise BadRequest(f"Error: user_sex must be 'male' or 'female', not '{address}'!")
         return address
@@ -35,13 +35,13 @@ class Phones(base_models.BaseModel):
     number = Column(String(), nullable=False)
 
     @validates("view")
-    def validate_phones_view(self, _, address):
+    def validate_phones_view(self, _, address: str) -> str:
         if address not in PHONES_VIEW:
             raise BadRequest(f"Error: view must be 'Городской' or 'Мобильный', not '{address}'!")
         return address
 
     @validates("number")
-    def validate_phones_number(self, _, address):
+    def validate_phones_number(self, _, address: str) -> str:
         if len(address) != 11:
             raise BadRequest("Error: number length must be equal to 11 and start with 8-***-***-**-**!")
         return address
@@ -57,13 +57,14 @@ class Emails(base_models.BaseModel):
     view = Column(String(), nullable=False)
 
     @validates("name_email")
-    def validate_email_name_email(self, _, address):
+    def validate_email_name_email(self, _, address: str) -> str:
         if "@" not in address:
             raise BadRequest(f"Error: '@' should be in 'name_email'!")
         return address
 
     @validates("view")
-    def validate_email_view(self, _, address):
+    def validate_email_view(self, _, address: str) -> str:
         if address not in EMAIL_VIEW:
+            print(type(address))
             raise BadRequest(f"Error: view must be 'Личная' or 'Рабочая', not '{address}'!")
         return address

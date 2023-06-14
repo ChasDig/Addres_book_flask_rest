@@ -13,7 +13,6 @@ users_serializer = api.model(
         "address": fields.String(required=True, max_length=256),
     },
 )
-
 phone_serializer = api.model(
     "Phones",
     {
@@ -23,7 +22,6 @@ phone_serializer = api.model(
         "number": fields.Integer(required=True),
     },
 )
-
 email_serializer = api.model(
     "Emails",
     {

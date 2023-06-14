@@ -7,7 +7,7 @@ from application.exceptions import register_base_exception, BaseServiceError
 from application.views import user_namespace, phone_namespace, email_namespace
 
 
-def create_application(config: str):
+def create_application(config: str) -> flask.Flask:
     app = flask.Flask(__name__)
     app.config.from_object(config)
 

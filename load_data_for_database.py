@@ -1,9 +1,10 @@
 import pathlib
-import json
 import datetime
+from typing import List, Dict, Any, Type
 from contextlib import suppress
 from sqlalchemy.exc import IntegrityError
 
+from application.setup.db.base_models import BaseModel
 from application.service import create_application
 from application.config import config
 from application.setup.db import db
@@ -13,7 +14,7 @@ BASE_PATH = pathlib.Path(__file__).resolve().parent.parent
 DATA_FOR_DATABASE_PATH = BASE_PATH / "address_book_flask_rest" / "data_for_database.json"
 
 
-def load_data_in_database(data, model):
+def load_data_in_database(data: List[Dict["str", Any]], model: Type[BaseModel]) -> None:
     for item in data:
         item["id"] = item.pop("pk")
         if item.get("data_birth"):

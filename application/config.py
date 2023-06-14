@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from typing import Type
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -36,7 +37,7 @@ class ProductionConfig(BaseConfig):
 class ApplicationConfig:
     """Setting configurations for the application."""
     @staticmethod
-    def configuration_setting(configuration_type: str):
+    def configuration_setting(configuration_type: str) -> Type[BaseConfig] | str:
         match configuration_type:
             case "testing":
                 return TestConfig

@@ -3,19 +3,20 @@ import pathlib
 import json
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
+HOST, PORT = "localhost", 5672
 
-connection = pika.BlockingConnection(
-    pika.ConnectionParameters(host='localhost'))
+
+connection = pika.BlockingConnection(pika.ConnectionParameters(host=HOST, port=PORT))
 channel = connection.channel()
 
-channel.exchange_declare(exchange='logs', exchange_type='fanout', durable=True)
+channel.exchange_declare(exchange="logs", exchange_type="fanout", durable=True)
 
-result = channel.queue_declare(queue='', exclusive=True)
+result = channel.queue_declare(queue="", exclusive=True)
 queue_name = result.method.queue
 
-channel.queue_bind(exchange='logs', queue=queue_name)
+channel.queue_bind(exchange="logs", queue=queue_name)
 
-print(' [*] Waiting for logs. To exit press CTRL+C')
+print(" [*] Waiting for logs. To exit press CTRL+C")
 
 
 def callback(ch, method, properties, body):

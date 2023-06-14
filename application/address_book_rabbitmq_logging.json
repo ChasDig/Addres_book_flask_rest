@@ -1,5 +1,5 @@
 {
-    "asctime": "2023-06-14 10:36:14,091",
+    "asctime": "2023-06-14 14:18:26,169",
     "levelname": "INFO",
     "module": "base",
     "funcName": "_connection_begin_impl",
@@ -7,34 +7,26 @@
     "message": "BEGIN (implicit)"
 }
 {
-    "asctime": "2023-06-14 10:36:14,096",
+    "asctime": "2023-06-14 14:18:26,174",
     "levelname": "INFO",
     "module": "base",
     "funcName": "_execute_context",
     "lineno": 1844,
-    "message": "SELECT emails.user_id AS emails_user_id, emails.name_email AS emails_name_email, emails.view AS emails_view, emails.id AS emails_id \nFROM emails \nWHERE emails.id = %(pk_1)s"
+    "message": "INSERT INTO users (username, user_images, sex, data_birth, address) VALUES (%(username)s, %(user_images)s, %(sex)s, %(data_birth)s, %(address)s) RETURNING users.id"
 }
 {
-    "asctime": "2023-06-14 10:36:14,097",
+    "asctime": "2023-06-14 14:18:26,174",
     "levelname": "INFO",
     "module": "base",
     "funcName": "_execute_context",
     "lineno": 1844,
-    "message": "[generated in 0.00029s] {'pk_1': 61}"
+    "message": "[generated in 0.00029s] {'username': 'Test1', 'user_images': '', 'sex': 'female', 'data_birth': datetime.date(1111, 11, 11), 'address': 'адресс Test1'}"
 }
 {
-    "asctime": "2023-06-14 10:36:14,098",
+    "asctime": "2023-06-14 14:18:26,175",
     "levelname": "INFO",
     "module": "base",
-    "funcName": "_connection_rollback_impl",
-    "lineno": 2688,
-    "message": "ROLLBACK"
-}
-{
-    "asctime": "2023-06-14 10:36:14,098",
-    "levelname": "INFO",
-    "module": "_internal",
-    "funcName": "_log",
-    "lineno": 187,
-    "message": "127.0.0.1 - - [14/Jun/2023 10:36:14] \"PUT /emails/ HTTP/1.1\" 200 -"
+    "funcName": "_connection_commit_impl",
+    "lineno": 2691,
+    "message": "COMMIT"
 }
