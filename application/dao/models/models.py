@@ -18,6 +18,16 @@ class Users(base_models.BaseModel):
     data_birth = Column(Date, nullable=False)
     address = Column(String(256), nullable=False)
 
+    def __init__(self, username, user_images, sex, data_birth, address):
+        self.username = username
+        self.user_images = user_images
+        self.sex = sex
+        self.data_birth = data_birth
+        self.address = address
+
+    def __repr__(self):
+        return f"id {self.id}"
+
     @validates("sex")
     def validate_user_sex(self, _, address: str) -> str:
         if address not in USER_SEX:
@@ -33,6 +43,14 @@ class Phones(base_models.BaseModel):
 
     view = Column(String(), nullable=False)
     number = Column(String(), nullable=False)
+
+    def __init__(self, user_id, view, number):
+        self.user_id = user_id
+        self.view = view
+        self.number = number
+
+    def __repr__(self):
+        return f"id {self.id}"
 
     @validates("view")
     def validate_phones_view(self, _, address: str) -> str:
@@ -55,6 +73,14 @@ class Emails(base_models.BaseModel):
 
     name_email = Column(String(128), nullable=False)
     view = Column(String(), nullable=False)
+
+    def __init__(self, user_id, name_email, view):
+        self.user_id = user_id
+        self.name_email = name_email
+        self.view = view
+
+    def __repr__(self):
+        return f"id {self.id}"
 
     @validates("name_email")
     def validate_email_name_email(self, _, address: str) -> str:

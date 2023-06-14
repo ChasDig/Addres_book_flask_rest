@@ -1,7 +1,6 @@
 {
   "users": [
     {
-      "pk": 1,
       "username": "Джонни Депп",
       "user_images": "",
       "sex": "male",
@@ -9,7 +8,6 @@
       "address": "адрес Джонни Деппа"
     },
     {
-      "pk": 2,
       "username": "Леонардо Ди Каприо",
       "user_images": "",
       "sex": "male",
@@ -17,7 +15,6 @@
       "address": "адрес Леонардо Ди Каприо"
     },
     {
-      "pk": 3,
       "username": "Робер Дауни-младший",
       "user_images": "",
       "sex": "male",
@@ -25,7 +22,6 @@
       "address": "адрес Робера Дауни-младшего"
     },
         {
-      "pk": 4,
       "username": "Анджелина Джоли",
       "user_images": "",
       "sex": "female",
@@ -33,7 +29,6 @@
       "address": "адрес Анджелины Джоли"
     },
     {
-      "pk": 5,
       "username": "Скарлетт Йоханссон",
       "user_images": "",
       "sex": "female",
@@ -43,31 +38,26 @@
   ],
   "phones": [
     {
-      "pk": 1,
       "user_id": 1,
       "view": "Мобильный",
       "number": "19397532846"
     },
     {
-      "pk": 2,
       "user_id": 2,
       "view": "Городской",
       "number": "13824682096"
     },
     {
-      "pk": 3,
       "user_id": 3,
       "view": "Мобильный",
       "number": "13571598536"
     },
     {
-      "pk": 4,
       "user_id": 4,
       "view": "Городской",
       "number": "12586542719"
     },
     {
-      "pk": 5,
       "user_id": 5,
       "view": "Мобильный",
       "number": "13217895841"
@@ -75,31 +65,26 @@
   ],
   "emails": [
     {
-      "pk": 1,
       "user_id": 1,
       "name_email": "johnny_depp@gmail.com",
       "view": "Личная"
     },
     {
-      "pk": 2,
       "user_id": 2,
       "name_email": "leonardo_dicaprio@gmail.com",
       "view": "Рабочая"
     },
     {
-      "pk": 3,
       "user_id": 3,
       "name_email": "robert_downey_jr@gmail.com",
       "view": "Личная"
     },
     {
-      "pk": 4,
       "user_id": 4,
       "name_email": "angelina_jolie@gmail.com",
       "view": "Рабочая"
     },
     {
-      "pk": 5,
       "user_id": 5,
       "name_email": "scarlett_johansson@gmail.com",
       "view": "Личная"

@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from typing import Type
+from sqlalchemy import create_engine
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -47,3 +48,4 @@ class ApplicationConfig:
 
 
 config = ApplicationConfig.configuration_setting("develop")
+engine = create_engine(TestConfig.SQLALCHEMY_DATABASE_URI)

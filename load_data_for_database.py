@@ -1,5 +1,6 @@
 import pathlib
 import datetime
+import json
 from typing import List, Dict, Any, Type
 from contextlib import suppress
 from sqlalchemy.exc import IntegrityError
@@ -16,7 +17,6 @@ DATA_FOR_DATABASE_PATH = BASE_PATH / "address_book_flask_rest" / "data_for_datab
 
 def load_data_in_database(data: List[Dict["str", Any]], model: Type[BaseModel]) -> None:
     for item in data:
-        item["id"] = item.pop("pk")
         if item.get("data_birth"):
             year, month, day = item["data_birth"].split("-")
             item["data_birth"] = datetime.date(int(year), int(month), int(day))
