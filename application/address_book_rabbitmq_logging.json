@@ -1,0 +1,40 @@
+{
+    "asctime": "2023-06-14 10:36:14,091",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-14 10:36:14,096",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "SELECT emails.user_id AS emails_user_id, emails.name_email AS emails_name_email, emails.view AS emails_view, emails.id AS emails_id \nFROM emails \nWHERE emails.id = %(pk_1)s"
+}
+{
+    "asctime": "2023-06-14 10:36:14,097",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00029s] {'pk_1': 61}"
+}
+{
+    "asctime": "2023-06-14 10:36:14,098",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_rollback_impl",
+    "lineno": 2688,
+    "message": "ROLLBACK"
+}
+{
+    "asctime": "2023-06-14 10:36:14,098",
+    "levelname": "INFO",
+    "module": "_internal",
+    "funcName": "_log",
+    "lineno": 187,
+    "message": "127.0.0.1 - - [14/Jun/2023 10:36:14] \"PUT /emails/ HTTP/1.1\" 200 -"
+}
