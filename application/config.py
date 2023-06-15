@@ -29,7 +29,7 @@ class ProductionConfig(BaseConfig):
     SQLALCHEMY_ECHO = True
     USERNAME = "postgres"
     PASSWORD = "postgres"
-    HOST = "localhost"
+    HOST = "172.18.0.2"
     PORT = 5432
     DATA_BASE_NAME = "postgres"
     SQLALCHEMY_DATABASE_URI = f"postgresql://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DATA_BASE_NAME}"
@@ -49,3 +49,4 @@ class ApplicationConfig:
 
 config = ApplicationConfig.configuration_setting("develop")
 engine = create_engine(TestConfig.SQLALCHEMY_DATABASE_URI)
+

@@ -3,7 +3,7 @@ import pathlib
 import json
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
-HOST, PORT = "localhost", 5672
+HOST, PORT = "172.18.0.3", 5672
 
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(host=HOST, port=PORT))

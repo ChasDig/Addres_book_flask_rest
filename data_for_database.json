@@ -2,35 +2,35 @@
   "users": [
     {
       "username": "Джонни Депп",
-      "user_images": "",
+      "user_images": "media/user_images/Johnny_Depp.png",
       "sex": "male",
       "data_birth": "1963-9-6",
       "address": "адрес Джонни Деппа"
     },
     {
       "username": "Леонардо Ди Каприо",
-      "user_images": "",
+      "user_images": "media/user_images/Leonardo_DiCaprio.jpg",
       "sex": "male",
       "data_birth": "1974-11-11",
       "address": "адрес Леонардо Ди Каприо"
     },
     {
       "username": "Робер Дауни-младший",
-      "user_images": "",
+      "user_images": "media/user_images/Robert_Downey _Jr.jpg",
       "sex": "male",
       "data_birth": "1965-4-4",
       "address": "адрес Робера Дауни-младшего"
     },
         {
       "username": "Анджелина Джоли",
-      "user_images": "",
+      "user_images": "media/user_images/Angelina_Jolie.jpg",
       "sex": "female",
       "data_birth": "1975-6-4",
       "address": "адрес Анджелины Джоли"
     },
     {
       "username": "Скарлетт Йоханссон",
-      "user_images": "",
+      "user_images": "media/user_images/Scarlett_Johansson.jpeg",
       "sex": "female",
       "data_birth": "1984-11-22",
       "address": "адресс Скарлетт Йоханссон"

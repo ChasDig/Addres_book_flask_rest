@@ -1,4 +1,5 @@
 import flask
+from flask_migrate import Migrate
 
 from application.setup.db import db
 from application.setup.api import api
@@ -12,6 +13,8 @@ def create_application(config: str) -> flask.Flask:
 
     db.init_app(app)
     api.init_app(app)
+
+    migrate = Migrate(app=app, db=db)
 
     api.add_namespace(user_namespace)
     api.add_namespace(phone_namespace)

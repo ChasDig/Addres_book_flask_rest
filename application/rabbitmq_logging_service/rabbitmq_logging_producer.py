@@ -2,7 +2,7 @@ import logging
 from python_logging_rabbitmq import RabbitMQHandler
 from pythonjsonlogger import jsonlogger
 
-HOST, PORT = "localhost", 5672
+HOST, PORT = "172.18.0.3", 5672
 
 
 def rabbitmq_logging(func):

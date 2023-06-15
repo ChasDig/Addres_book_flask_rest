@@ -1,9 +1,14 @@
 import datetime
+import os.path
+import pathlib
 from sqlalchemy import desc
 from typing import Type, List
 
 from .base_dao import BaseDAO, BaseModelTypes
 from .models import Users, Phones, Emails
+from application.exceptions import ItemNotFound
+
+BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
 
 
 class UsersDAO(BaseDAO[Users]):
@@ -40,6 +45,13 @@ class UsersDAO(BaseDAO[Users]):
             user.data_birth = datetime.date(int(year), int(month), int(day))
         if "address" in data_json:
             user.address = data_json["address"]
+        if "user_images" in data_json and os.path.exists(BASE_DIR + f"/{str(data_json['user_images'])}"):
+            try:
+                user.user_images = data_json["user_images"]
+            except Exception:
+                raise ItemNotFound(f"Error: image for user with path '{data_json['user_images']}' not found! "
+                                   f"Example of sending the path to the desired image: "
+                                   f"'media/user_images/user_image.jpeg'")
         self.db_session.add(user)
         self.db_session.commit()
         return user

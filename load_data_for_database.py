@@ -1,4 +1,4 @@
-import pathlib
+import os
 import datetime
 import json
 from typing import List, Dict, Any, Type
@@ -11,8 +11,9 @@ from application.config import config
 from application.setup.db import db
 from application.dao.models.models import Users, Phones, Emails
 
-BASE_PATH = pathlib.Path(__file__).resolve().parent.parent
-DATA_FOR_DATABASE_PATH = BASE_PATH / "address_book_flask_rest" / "data_for_database.json"
+
+BASE_PATH = os.path.dirname(os.path.abspath(__file__))
+DATA_FOR_DATABASE_PATH = BASE_PATH + "/data_for_database.json"
 
 
 def load_data_in_database(data: List[Dict["str", Any]], model: Type[BaseModel]) -> None:
