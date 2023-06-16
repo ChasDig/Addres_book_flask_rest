@@ -31,7 +31,7 @@ python rabbitmq_logging_service/rabbitmq_logging_consumer.py
 ```shell
 cat address_book_rabbitmq_logging.json
 ```
-### Развертывание приложения через docker-composeЖ
+### Развертывание приложения через docker-compose:
 #### Требует настройки, рекомендуется пока использовать первый способ:
 - Выполняем сборку контейнера и запуск сервера:
 ```shell
