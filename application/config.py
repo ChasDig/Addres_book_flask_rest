@@ -29,9 +29,9 @@ class ProductionConfig(BaseConfig):
     SQLALCHEMY_ECHO = True
     USERNAME = "postgres"
     PASSWORD = "postgres"
-    HOST = "172.18.0.2"
+    HOST = "localhost"
     PORT = 5432
-    DATA_BASE_NAME = "postgres"
+    DATA_BASE_NAME = "address_book_flask_rest_postgres"
     SQLALCHEMY_DATABASE_URI = f"postgresql://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DATA_BASE_NAME}"
 
 

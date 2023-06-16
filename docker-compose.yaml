@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+    ports:
+      - "80:80"
+    depends_on:
+      address_book_flask_rest_postgres:
+        condition: service_healthy
+      address_book_flask_rest_rabbit:
+        condition: service_completed_successfully
+    command: bash entrypoint_docker.sh
+  address_book_flask_rest_rabbit:
+    image: rabbitmq:latest
+    ports:
+      - "5672:5672"
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 30s
+      timeout: 30s
+      retries: 3
+  address_book_flask_rest_postgres:
+    container_name: address_book_flask_rest_postgres
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: address_book_flask_rest_postgres
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5

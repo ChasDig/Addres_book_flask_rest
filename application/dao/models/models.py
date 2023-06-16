@@ -42,7 +42,7 @@ class Phones(base_models.BaseModel):
     user = relationship("Users")
 
     view = Column(String(), nullable=False)
-    number = Column(String(), nullable=False)
+    number = Column(String(), nullable=False, unique=True)
 
     def __init__(self, user_id, view, number):
         self.user_id = user_id
@@ -71,7 +71,7 @@ class Emails(base_models.BaseModel):
     user_id = Column(Integer, ForeignKey(f"{Users.__tablename__}.id"), nullable=False)
     users = relationship("Users")
 
-    name_email = Column(String(128), nullable=False)
+    name_email = Column(String(128), nullable=False, unique=True)
     view = Column(String(), nullable=False)
 
     def __init__(self, user_id, name_email, view):

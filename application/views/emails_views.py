@@ -6,7 +6,7 @@ from flask import request
 from application.dao.models import Emails
 from application.container import email_service
 from application.setup.api.models_serialization import email_serializer
-from application.rabbitmq_logging_service import rabbitmq_logging
+from rabbitmq_logging_service import rabbitmq_logging
 
 api = Namespace("emails")
 

@@ -6,7 +6,7 @@ from flask import request
 from application.dao.models import Phones
 from application.container import phone_service
 from application.setup.api.models_serialization import phone_serializer
-from application.rabbitmq_logging_service import rabbitmq_logging
+from rabbitmq_logging_service import rabbitmq_logging
 
 api = Namespace("phones")
 

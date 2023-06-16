@@ -1,0 +1,587 @@
+{
+    "asctime": "2023-06-16 09:47:27,202",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:47:27,208",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "INSERT INTO emails (user_id, name_email, view) VALUES (%(user_id)s, %(name_email)s, %(view)s) RETURNING emails.id"
+}
+{
+    "asctime": "2023-06-16 09:47:27,208",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00053s] {'user_id': 1, 'name_email': 'test@gmail.com', 'view': 'Личная'}"
+}
+{
+    "asctime": "2023-06-16 09:47:27,209",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_commit_impl",
+    "lineno": 2691,
+    "message": "COMMIT"
+}
+{
+    "asctime": "2023-06-16 09:47:56,972",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:47:56,977",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "SELECT emails.user_id AS emails_user_id, emails.name_email AS emails_name_email, emails.view AS emails_view, emails.id AS emails_id \nFROM emails \nWHERE emails.id = %(id_1)s"
+}
+{
+    "asctime": "2023-06-16 09:47:56,977",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[cached since 9.808s ago] {'id_1': 6}"
+}
+{
+    "asctime": "2023-06-16 09:47:56,979",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "UPDATE emails SET name_email=%(name_email)s WHERE emails.id = %(emails_id)s"
+}
+{
+    "asctime": "2023-06-16 09:47:56,979",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00031s] {'name_email': 'test1@gmail.com', 'emails_id': 6}"
+}
+{
+    "asctime": "2023-06-16 09:47:56,980",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_commit_impl",
+    "lineno": 2691,
+    "message": "COMMIT"
+}
+{
+    "asctime": "2023-06-16 09:48:02,885",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:48:02,890",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "DELETE FROM emails WHERE emails.id = %(id_1)s"
+}
+{
+    "asctime": "2023-06-16 09:48:02,890",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00027s] {'id_1': 6}"
+}
+{
+    "asctime": "2023-06-16 09:48:02,891",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_commit_impl",
+    "lineno": 2691,
+    "message": "COMMIT"
+}
+{
+    "asctime": "2023-06-16 09:49:44,633",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:49:44,637",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "INSERT INTO phones (user_id, view, number) VALUES (%(user_id)s, %(view)s, %(number)s) RETURNING phones.id"
+}
+{
+    "asctime": "2023-06-16 09:49:44,638",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00027s] {'user_id': 1, 'view': 'Мобильный', 'number': '19397532999'}"
+}
+{
+    "asctime": "2023-06-16 09:49:44,639",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_commit_impl",
+    "lineno": 2691,
+    "message": "COMMIT"
+}
+{
+    "asctime": "2023-06-16 09:50:09,529",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:50:09,532",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "SELECT phones.user_id AS phones_user_id, phones.view AS phones_view, phones.number AS phones_number, phones.id AS phones_id \nFROM phones \nWHERE phones.id = %(id_1)s"
+}
+{
+    "asctime": "2023-06-16 09:50:09,532",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[cached since 10.7s ago] {'id_1': 6}"
+}
+{
+    "asctime": "2023-06-16 09:50:09,534",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "UPDATE phones SET number=%(number)s WHERE phones.id = %(phones_id)s"
+}
+{
+    "asctime": "2023-06-16 09:50:09,534",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00026s] {'number': '19397532666', 'phones_id': 6}"
+}
+{
+    "asctime": "2023-06-16 09:50:09,535",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_commit_impl",
+    "lineno": 2691,
+    "message": "COMMIT"
+}
+{
+    "asctime": "2023-06-16 09:50:13,706",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:50:13,710",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "DELETE FROM phones WHERE phones.id = %(id_1)s"
+}
+{
+    "asctime": "2023-06-16 09:50:13,710",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00030s] {'id_1': 6}"
+}
+{
+    "asctime": "2023-06-16 09:50:13,711",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_commit_impl",
+    "lineno": 2691,
+    "message": "COMMIT"
+}
+{
+    "asctime": "2023-06-16 09:51:59,340",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:51:59,344",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "INSERT INTO users (username, user_images, sex, data_birth, address) VALUES (%(username)s, %(user_images)s, %(sex)s, %(data_birth)s, %(address)s) RETURNING users.id"
+}
+{
+    "asctime": "2023-06-16 09:51:59,344",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00025s] {'username': 'test', 'user_images': 'media/user_images/Johnny_Depp.png', 'sex': 'male', 'data_birth': datetime.date(1111, 11, 11), 'address': 'адрес test'}"
+}
+{
+    "asctime": "2023-06-16 09:51:59,345",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_commit_impl",
+    "lineno": 2691,
+    "message": "COMMIT"
+}
+{
+    "asctime": "2023-06-16 09:52:18,437",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:52:18,442",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "SELECT users.username AS users_username, users.user_images AS users_user_images, users.sex AS users_sex, users.data_birth AS users_data_birth, users.address AS users_address, users.id AS users_id \nFROM users \nWHERE users.id = %(id_1)s"
+}
+{
+    "asctime": "2023-06-16 09:52:18,442",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00051s] {'id_1': 6}"
+}
+{
+    "asctime": "2023-06-16 09:52:18,443",
+    "levelname": "ERROR",
+    "module": "app",
+    "funcName": "log_exception",
+    "lineno": 1414,
+    "message": "Exception on /users/6/ [PATCH]",
+    "exc_info": "Traceback (most recent call last):\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask/app.py\", line 1484, in full_dispatch_request\n    rv = self.dispatch_request()\n         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask/app.py\", line 1469, in dispatch_request\n    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask_restx/api.py\", line 404, in wrapper\n    resp = resource(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask/views.py\", line 109, in view\n    return current_app.ensure_sync(self.dispatch_request)(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask_restx/resource.py\", line 46, in dispatch_request\n    resp = meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask_restx/marshalling.py\", line 244, in wrapper\n    resp = f(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/rabbitmq_logging_service/rabbitmq_logging_producer.py\", line 20, in start_logging\n    result = func(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/application/views/users_views.py\", line 42, in patch\n    return users_service.update_user(user_id=user_id, data_json=data_json)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/application/services/user_services.py\", line 33, in update_user\n    return self.dao.update_user(user_id=user_id, data_json=data_json)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/application/dao/main_dao.py\", line 48, in update_user\n    if \"user_images\" in data_json and os.path.exists(BASE_DIR + f\"/{str(data_json['user_images'])}\"):\n                                                     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nTypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'"
+}
+{
+    "asctime": "2023-06-16 09:52:18,444",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_rollback_impl",
+    "lineno": 2688,
+    "message": "ROLLBACK"
+}
+{
+    "asctime": "2023-06-16 09:52:18,445",
+    "levelname": "INFO",
+    "module": "_internal",
+    "funcName": "_log",
+    "lineno": 187,
+    "message": "127.0.0.1 - - [16/Jun/2023 09:52:18] \"\u001b[35m\u001b[1mPATCH /users/6/ HTTP/1.1\u001b[0m\" 500 -"
+}
+{
+    "asctime": "2023-06-16 09:52:20,213",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:52:20,213",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:52:20,217",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "SELECT users.username AS users_username, users.user_images AS users_user_images, users.sex AS users_sex, users.data_birth AS users_data_birth, users.address AS users_address, users.id AS users_id \nFROM users \nWHERE users.id = %(id_1)s"
+}
+{
+    "asctime": "2023-06-16 09:52:20,217",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "SELECT users.username AS users_username, users.user_images AS users_user_images, users.sex AS users_sex, users.data_birth AS users_data_birth, users.address AS users_address, users.id AS users_id \nFROM users \nWHERE users.id = %(id_1)s"
+}
+{
+    "asctime": "2023-06-16 09:52:20,217",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[cached since 1.776s ago] {'id_1': 6}"
+}
+{
+    "asctime": "2023-06-16 09:52:20,217",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[cached since 1.776s ago] {'id_1': 6}"
+}
+{
+    "asctime": "2023-06-16 09:52:20,219",
+    "levelname": "ERROR",
+    "module": "app",
+    "funcName": "log_exception",
+    "lineno": 1414,
+    "message": "Exception on /users/6/ [PATCH]",
+    "exc_info": "Traceback (most recent call last):\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask/app.py\", line 1484, in full_dispatch_request\n    rv = self.dispatch_request()\n         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask/app.py\", line 1469, in dispatch_request\n    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask_restx/api.py\", line 404, in wrapper\n    resp = resource(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask/views.py\", line 109, in view\n    return current_app.ensure_sync(self.dispatch_request)(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask_restx/resource.py\", line 46, in dispatch_request\n    resp = meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask_restx/marshalling.py\", line 244, in wrapper\n    resp = f(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/rabbitmq_logging_service/rabbitmq_logging_producer.py\", line 20, in start_logging\n    result = func(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/application/views/users_views.py\", line 42, in patch\n    return users_service.update_user(user_id=user_id, data_json=data_json)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/application/services/user_services.py\", line 33, in update_user\n    return self.dao.update_user(user_id=user_id, data_json=data_json)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/application/dao/main_dao.py\", line 48, in update_user\n    if \"user_images\" in data_json and os.path.exists(BASE_DIR + f\"/{str(data_json['user_images'])}\"):\n                                                     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nTypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'"
+}
+{
+    "asctime": "2023-06-16 09:52:20,219",
+    "levelname": "ERROR",
+    "module": "app",
+    "funcName": "log_exception",
+    "lineno": 1414,
+    "message": "Exception on /users/6/ [PATCH]",
+    "exc_info": "Traceback (most recent call last):\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask/app.py\", line 1484, in full_dispatch_request\n    rv = self.dispatch_request()\n         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask/app.py\", line 1469, in dispatch_request\n    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask_restx/api.py\", line 404, in wrapper\n    resp = resource(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask/views.py\", line 109, in view\n    return current_app.ensure_sync(self.dispatch_request)(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask_restx/resource.py\", line 46, in dispatch_request\n    resp = meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/venv/lib/python3.11/site-packages/flask_restx/marshalling.py\", line 244, in wrapper\n    resp = f(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/rabbitmq_logging_service/rabbitmq_logging_producer.py\", line 20, in start_logging\n    result = func(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/application/views/users_views.py\", line 42, in patch\n    return users_service.update_user(user_id=user_id, data_json=data_json)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/application/services/user_services.py\", line 33, in update_user\n    return self.dao.update_user(user_id=user_id, data_json=data_json)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/degert/PycharmProjects/address_book_flask_rest/application/dao/main_dao.py\", line 48, in update_user\n    if \"user_images\" in data_json and os.path.exists(BASE_DIR + f\"/{str(data_json['user_images'])}\"):\n                                                     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nTypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'"
+}
+{
+    "asctime": "2023-06-16 09:52:20,222",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_rollback_impl",
+    "lineno": 2688,
+    "message": "ROLLBACK"
+}
+{
+    "asctime": "2023-06-16 09:52:20,222",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_rollback_impl",
+    "lineno": 2688,
+    "message": "ROLLBACK"
+}
+{
+    "asctime": "2023-06-16 09:52:20,223",
+    "levelname": "INFO",
+    "module": "_internal",
+    "funcName": "_log",
+    "lineno": 187,
+    "message": "127.0.0.1 - - [16/Jun/2023 09:52:20] \"\u001b[35m\u001b[1mPATCH /users/6/ HTTP/1.1\u001b[0m\" 500 -"
+}
+{
+    "asctime": "2023-06-16 09:52:20,223",
+    "levelname": "INFO",
+    "module": "_internal",
+    "funcName": "_log",
+    "lineno": 187,
+    "message": "127.0.0.1 - - [16/Jun/2023 09:52:20] \"\u001b[35m\u001b[1mPATCH /users/6/ HTTP/1.1\u001b[0m\" 500 -"
+}
+{
+    "asctime": "2023-06-16 09:52:43,753",
+    "levelname": "INFO",
+    "module": "_internal",
+    "funcName": "_log",
+    "lineno": 187,
+    "message": "127.0.0.1 - - [16/Jun/2023 09:52:43] \"\u001b[31m\u001b[1mPATCH /users/6/ HTTP/1.1\u001b[0m\" 400 -"
+}
+{
+    "asctime": "2023-06-16 09:52:43,753",
+    "levelname": "INFO",
+    "module": "_internal",
+    "funcName": "_log",
+    "lineno": 187,
+    "message": "127.0.0.1 - - [16/Jun/2023 09:52:43] \"\u001b[31m\u001b[1mPATCH /users/6/ HTTP/1.1\u001b[0m\" 400 -"
+}
+{
+    "asctime": "2023-06-16 09:52:43,753",
+    "levelname": "INFO",
+    "module": "_internal",
+    "funcName": "_log",
+    "lineno": 187,
+    "message": "127.0.0.1 - - [16/Jun/2023 09:52:43] \"\u001b[31m\u001b[1mPATCH /users/6/ HTTP/1.1\u001b[0m\" 400 -"
+}
+{
+    "asctime": "2023-06-16 09:54:17,436",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "select pg_catalog.version()"
+}
+{
+    "asctime": "2023-06-16 09:54:17,446",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[raw sql] {}"
+}
+{
+    "asctime": "2023-06-16 09:54:17,449",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "select current_schema()"
+}
+{
+    "asctime": "2023-06-16 09:54:17,449",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[raw sql] {}"
+}
+{
+    "asctime": "2023-06-16 09:54:17,450",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "show standard_conforming_strings"
+}
+{
+    "asctime": "2023-06-16 09:54:17,450",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[raw sql] {}"
+}
+{
+    "asctime": "2023-06-16 09:54:17,452",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:54:17,455",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "INSERT INTO users (username, user_images, sex, data_birth, address) VALUES (%(username)s, %(user_images)s, %(sex)s, %(data_birth)s, %(address)s) RETURNING users.id"
+}
+{
+    "asctime": "2023-06-16 09:54:17,455",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00070s] {'username': 'test1', 'user_images': 'media/user_images/Johnny_Depp.png', 'sex': 'male', 'data_birth': datetime.date(1111, 11, 12), 'address': 'адрес test1'}"
+}
+{
+    "asctime": "2023-06-16 09:54:17,458",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_commit_impl",
+    "lineno": 2691,
+    "message": "COMMIT"
+}
+{
+    "asctime": "2023-06-16 09:54:58,496",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:54:58,504",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "SELECT users.username AS users_username, users.user_images AS users_user_images, users.sex AS users_sex, users.data_birth AS users_data_birth, users.address AS users_address, users.id AS users_id \nFROM users \nWHERE users.id = %(id_1)s"
+}
+{
+    "asctime": "2023-06-16 09:54:58,504",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00032s] {'id_1': 8}"
+}
+{
+    "asctime": "2023-06-16 09:54:58,506",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "UPDATE users SET username=%(username)s, data_birth=%(data_birth)s, address=%(address)s WHERE users.id = %(users_id)s"
+}
+{
+    "asctime": "2023-06-16 09:54:58,506",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00026s] {'username': 'test3', 'data_birth': datetime.date(1111, 11, 13), 'address': 'адрес test3', 'users_id': 8}"
+}
+{
+    "asctime": "2023-06-16 09:54:58,507",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_commit_impl",
+    "lineno": 2691,
+    "message": "COMMIT"
+}
+{
+    "asctime": "2023-06-16 09:55:07,945",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_begin_impl",
+    "lineno": 2685,
+    "message": "BEGIN (implicit)"
+}
+{
+    "asctime": "2023-06-16 09:55:07,949",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "DELETE FROM users WHERE users.id = %(id_1)s"
+}
+{
+    "asctime": "2023-06-16 09:55:07,949",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_execute_context",
+    "lineno": 1844,
+    "message": "[generated in 0.00026s] {'id_1': 8}"
+}
+{
+    "asctime": "2023-06-16 09:55:07,950",
+    "levelname": "INFO",
+    "module": "base",
+    "funcName": "_connection_commit_impl",
+    "lineno": 2691,
+    "message": "COMMIT"
+}

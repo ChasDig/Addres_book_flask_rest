@@ -45,7 +45,7 @@ class UsersDAO(BaseDAO[Users]):
             user.data_birth = datetime.date(int(year), int(month), int(day))
         if "address" in data_json:
             user.address = data_json["address"]
-        if "user_images" in data_json and os.path.exists(BASE_DIR + f"/{str(data_json['user_images'])}"):
+        if "user_images" in data_json and os.path.exists(BASE_DIR / f"{str(data_json['user_images'])}"):
             try:
                 user.user_images = data_json["user_images"]
             except Exception:
