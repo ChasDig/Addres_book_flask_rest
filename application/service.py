@@ -1,5 +1,6 @@
 import flask
 from flask_migrate import Migrate
+from flask_cors import CORS
 
 from application.setup.db import db
 from application.setup.api import api
@@ -10,6 +11,8 @@ from application.views import user_namespace, phone_namespace, email_namespace
 def create_application(config) -> flask.Flask:
     app = flask.Flask(__name__)
     app.config.from_object(config)
+
+    CORS(app=app)
 
     db.init_app(app)
     api.init_app(app)
