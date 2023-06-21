@@ -41,8 +41,9 @@ class UsersDAO(BaseDAO[Users]):
         if "sex" in data_json:
             user.sex = data_json["sex"]
         if "data_birth" in data_json:
-            year, month, day = data_json["data_birth"].split("-")
-            user.data_birth = datetime.date(int(year), int(month), int(day))
+            # year, month, day = data_json["data_birth"].split("-")
+            # user.data_birth = datetime.date(int(year), int(month), int(day))
+            user.data_birth = data_json["data_birth"]
         if "address" in data_json:
             user.address = data_json["address"]
         if "user_images" in data_json and os.path.exists(BASE_DIR / f"{str(data_json['user_images'])}"):
