@@ -20,7 +20,7 @@ class EmailServices:
     def get_all_emails(self) -> List[Type[Emails]]:
         return self.dao.get_all_emails()
 
-    def create_email(self, data_json: dict) -> Type[Emails]:
+    def create_email(self, data_json: dict) -> Emails:
         try:
             return self.dao.create_email(data_json=data_json)
         except KeyError as ex:
